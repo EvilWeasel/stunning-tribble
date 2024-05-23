@@ -3,9 +3,9 @@
         <img src="/images/me.webp" alt="My Image">
     </div>
     <div class="hero-text">
-        <h2>Hi, ich bin</h2>
+        <h2 class="color-accent">Hi, ich bin</h2>
         <h1>Tobias Wehrle</h1>
-        <h3>Developer; Trainer; Gamer;</h3>
+        <h3 class="color-primary">Developer; Trainer; Gamer;</h3>
         <p>
             Leidenschaftlicher Beibringer von Wissen und Programmierer. In meiner Welt verschmelzen Technologie und Bildung zu einzigartigen Erlebnissen. Stets auf der Suche nach neuen Herausforderungen und Wegen, um Wissen spielerisch zu vermitteln.
         </p>
@@ -38,6 +38,10 @@
     }
     .hero .hero-text {
         width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .hero-text p {
         margin-top: 1rem;
@@ -45,14 +49,21 @@
         background-color: rgba(0,0,0,0.3);
         border-radius: 15px;
         padding: 1rem;
+        max-width: 40ch;
     }
     .hero-text p::before {
-        color: fuchsia;
-        content: '"';
+        color: var(--color-accent);
+        content: '“';
     }
     .hero-text p::after {
-        color: fuchsia;
-        content: '"';
+        color: var(--color-accent);
+        content: '”';
+    }
+    .color-accent {
+        color: var(--color-accent);
+    }
+    .color-primary {
+        color: var(--color-primary);
     }
     /* @media screen and (max-width: 821px) {
         .hero {
